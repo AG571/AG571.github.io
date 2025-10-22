@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviv Geron | AI Operations & Machine Learning Specialist</title>
+    <meta name="description" content="AI Operations and Machine Learning specialist with 10+ years' experience in automated quality assurance, AI moderation, and knowledge management systems.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #0f172a;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e2e8f0;
+            --success: #10b981;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .hero .tagline {
+            font-size: 1.125rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 4rem 0;
+            background: var(--bg-alt);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        section .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+        }
+
+        /* Expertise Section */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .expertise-card {
+            padding: 2rem;
+            background: var(--bg-alt);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .expertise-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .expertise-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .expertise-card li {
+            padding: 0.5rem 0;
+            color: var(--text);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .expertise-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: var(--bg-alt);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+
+        .timeline-item h3 {
+            font-size: 1.75rem;
+            color: var(--secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-meta {
+            color: var(--text-light);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .timeline-item li {
+            padding: 0.5rem 0;
+            color: var(--text);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .project-card .impact {
+            background: var(--bg-alt);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border-left: 3px solid var(--success);
+        }
+
+        .project-card .impact strong {
+            color: var(--success);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-size: 1.125rem;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0f1e;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.25rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .timeline {
+                padding-left: 2rem;
+            }
+
+            .timeline-item:before {
+                left: -2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Aviv Geron</a>
+            <ul class="nav-links">
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Aviv Geron</h1>
+            <p class="subtitle">AI Operations & Machine Learning Specialist</p>
+            <p class="tagline">Building automated quality assurance systems, AI moderation infrastructure, and knowledge management systems that train both human and AI moderators. Delivering measurable business impact through intelligent automation and human-AI alignment.</p>
+            <div class="cta-buttons">
+                <a href="mailto:geron.aviv@hotmail.com" class="btn btn-primary">Get in Touch</a>
+                <a href="#projects" class="btn btn-secondary">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">46%</div>
+                    <div class="stat-label">Reduction in AI Moderation Leakage</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$29M</div>
+                    <div class="stat-label">Combined Revenue & Cost Savings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4,000+</div>
+                    <div class="stat-label">Users Supported Globally</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise">
+        <div class="container">
+            <h2>Core Expertise</h2>
+            <p class="section-subtitle">Specialized in AI operations, automation, and building systems that bridge human and machine intelligence.</p>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h3>AI & ML Operations</h3>
+                    <ul>
+                        <li>AI moderation systems & Auto QA/RCA</li>
+                        <li>Risk Harm Evaluation frameworks</li>
+                        <li>Golden Set benchmarking</li>
+                        <li>Human-AI workflow optimization</li>
+                        <li>Training data optimization</li>
+                        <li>LLM training support</li>
+                        <li>Model performance tracking</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Automation & Integration</h3>
+                    <ul>
+                        <li>API integrations & system automation</li>
+                        <li>Automated risk scoring systems</li>
+                        <li>A/B testing frameworks</li>
+                        <li>Incident detection systems</li>
+                        <li>Jira & workflow automation</li>
+                        <li>Chatbot design & deployment</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Governance & Compliance</h3>
+                    <ul>
+                        <li>AI-driven compliance frameworks</li>
+                        <li>Policy effectiveness measurement</li>
+                        <li>Cross-regional governance</li>
+                        <li>Regulatory alignment (DSA, US standards)</li>
+                        <li>Automated audit systems</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <h3>Knowledge Systems</h3>
+                    <ul>
+                        <li>Dual-purpose documentation (human & AI)</li>
+                        <li>Taxonomy & metadata design</li>
+                        <li>Policy tagging for ML models</li>
+                        <li>KCS methodology implementation</li>
+                        <li>Structured data mapping</li>
+                        <li>Misinformation policy frameworks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <p class="section-subtitle">A decade of building AI systems and automation infrastructure at scale.</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Policy Operations Manager</h3>
+                    <div class="timeline-meta">TikTok | Feb 2024 - Present</div>
+                    <ul>
+                        <li>Trained Auto QA systems and performed Root Cause Analysis, reducing AI moderation leakage by 46% and improving automated enforcement accuracy by 28%</li>
+                        <li>Designed Risk Harm Evaluation framework combining AI-based risk scoring with policy tagging to assess automated enforcement decisions</li>
+                        <li>Built crisis scoring system using automated formulas to calculate risk factors and classify incidents for rapid response</li>
+                        <li>Developed Golden Set benchmarking system creating validated datasets that train automated enforcement systems</li>
+                        <li>Created enforcement planning for AI moderator retraining based on monthly policy iteration cycles</li>
+                        <li>Built policy effectiveness measurement system using automated analytics and risk modeling</li>
+                        <li>Designed governance frameworks projected to deliver $22M in annual revenue for regulated industries</li>
+                        <li>Standardized automated governance processes across 7 global regions, saving $7.2M annually</li>
+                        <li>Trained 1,600+ reviewers on AI-human alignment standards through Golden Template Program</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Knowledge Management Lead</h3>
+                    <div class="timeline-meta">TikTok | Jun 2022 - Feb 2024</div>
+                    <ul>
+                        <li>Built comprehensive knowledge systems supporting both human reviewers and automated AI moderators</li>
+                        <li>Authored TikTok's misinformation policies with dual-purpose guidance training both humans and ML models to recognize 6 distinct misinformation types</li>
+                        <li>Designed global policy documentation supporting 4,000+ enforcement users across EMEA, APAC, and Americas</li>
+                        <li>Led IME Taxonomy Project mapping policies to regulatory frameworks, improving content classification accuracy</li>
+                        <li>Implemented MI Policy Tagging Project establishing metadata standards to enhance LLM training data quality</li>
+                        <li>Partnered with Legal and Regulatory teams ensuring alignment with EU DSA and US regulatory standards</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Content Operations Specialist</h3>
+                    <div class="timeline-meta">Fastly | Feb 2021 - Jun 2022 | London</div>
+                    <ul>
+                        <li>Led CMS platform implementation including API integration testing and automated translation tools</li>
+                        <li>Built Jira automation workflows managing localization projects across 4 languages</li>
+                        <li>Designed automated QA workflows reducing manual review time by 20%</li>
+                        <li>Created scalable editorial standards supporting automated content management pipelines</li>
+                        <li>Delivered 60+ projects using agile methodology with sprint planning and Confluence knowledge systems</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Content Quality Manager</h3>
+                    <div class="timeline-meta">Expedia Group | Mar 2018 - Sep 2020 | London</div>
+                    <ul>
+                        <li>Led A/B testing framework for new product launches using automated analytics</li>
+                        <li>Developed automated compliance audit systems improving editorial accuracy by 15%</li>
+                        <li>Built playbooks and taxonomy structures supporting AI-enhanced content discovery</li>
+                        <li>Collaborated with Product and SEO teams optimizing content through iterative testing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Key Projects & Achievements</h2>
+            <p class="section-subtitle">Driving business impact through intelligent automation and AI operations.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Auto QA & RCA Systems</h3>
+                        <p>Trained automated quality assurance systems for content moderation with continuous model retraining and root cause analysis.</p>
+                        <div class="impact">
+                            <strong>Impact:</strong> 46% reduction in AI moderation leakage, 28% improvement in automated enforcement accuracy
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Risk Harm Evaluation Framework</h3>
+                        <p>Designed comprehensive RHE system combining AI-based risk scoring with policy tagging to assess automated enforcement decisions and guide model retraining.</p>
+                        <div class="impact">
+                            <strong>Impact:</strong> Systematic identification of high-risk outcomes, enabling targeted model improvements
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Golden Set Benchmarking System</h3>
+                        <p>Created validated ground-truth datasets that train and optimize automated enforcement systems for human-AI alignment across thousands of users.</p>
+                        <div class="impact">
+                            <strong>Impact:</strong> Standardized training for 4,000+ global enforcement users
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Crisis Scoring & Incident Detection</h3>
+                        <p>Built automated crisis scoring system using formulas to calculate risk factors and classify incidents, enabling rapid response during sensitive global events.</p>
+                        <div class="impact">
+                            <strong>Impact:</strong> Real-time automated response to elections, misinformation campaigns, and high-priority events
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>AI Governance Frameworks</h3>
+                        <p>Designed compliance frameworks enabling entry into regulated industries (healthcare, financial services) with automated governance processes.</p>
+                        <div class="impact">
+                            <strong>Impact:</strong> $22M projected annual revenue, $7.2M cost savings, 32% accuracy improvement
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Misinformation Policy & ML Training</h3>
+                        <p>Authored dual-purpose misinformation policies training both human moderators and ML models to recognize 6 distinct misinformation types.</p>
+                        <div class="impact">
+                            <strong>Impact:</strong> Enhanced LLM training data quality, improved automated classification accuracy
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Interested in AI operations, automation, or building intelligent systems? Let's talk.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:geron.aviv@hotmail.com" class="contact-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    geron.aviv@hotmail.com
+                </a>
+                <a href="https://linkedin.com/in/avivgeron" class="contact-link" target="_blank" rel="noopener">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn Profile
+                </a>
+                <a href="tel:+447540047219" class="contact-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    +44 7540 047219
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Aviv Geron. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.expertise-card, .project-card, .timeline-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
